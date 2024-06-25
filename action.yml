@@ -1,4 +1,5 @@
-name: 'Python'
+name: 'Setup Python Poetry Just'
+description: 'An action to setup Python, Poetry and Just plus install project dependencies.'
 
 runs:
   using: 'composite'
