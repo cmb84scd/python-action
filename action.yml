@@ -1,16 +1,26 @@
 name: 'Setup Python Poetry Just'
 description: 'An action to setup Python, Poetry and Just plus install project dependencies.'
 
+inputs:
+  poetry-version:
+    description: 'The version of poetry to install'
+    required: false
+    default: '1.8.3'
+  python-version:
+    description: 'The version of python to install'
+    required: false
+    default: '3.12'
+
 runs:
   using: 'composite'
   steps:
   - uses: actions/checkout@v4
   - uses: abatilo/actions-poetry@v3
     with:
-      poetry-version: '1.8.3'
+      poetry-version: ${{ inputs.poetry-version }}
   - uses: actions/setup-python@v5
     with:
-      python-version: '3.12'
+      python-version: ${{ inputs.python-version }}
       cache: 'poetry'
   - uses: extractions/setup-just@v2
   - name: install dependencies
