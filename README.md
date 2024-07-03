@@ -2,7 +2,7 @@
 
 This GitHub Action sets up Python, Poetry and Just, as well as using Just to install project dependencies, in your workflow.
 
-It should be noted that, by default, this Action uses `Python version 3.12` and `Poetry version 1.8.3` but you can pass in your preferred version if you don't want ot use the defaults.
+By default, this Action uses `Python version 3.12` and `Poetry version 1.8.3` but you can pass in a version of your choosing if you prefer.
 
 ## Examples
 
