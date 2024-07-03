@@ -1,5 +1,6 @@
 name: 'Setup Python Poetry Just'
 description: 'An action to setup Python, Poetry and Just plus install project dependencies.'
+author: 'Catriona Bennett'
 
 inputs:
   poetry-version:
@@ -26,3 +27,7 @@ runs:
   - name: install dependencies
     run: just install
     shell: bash
+
+branding:
+  icon: 'package'
+  color: 'blue'
